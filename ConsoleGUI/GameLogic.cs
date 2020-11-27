@@ -42,12 +42,14 @@ namespace ConsoleGUI
             }
         }
 
-        private static void DrawGridChessPattern(string[,] grid)
+        private void DrawGridChessPattern(string[,] grid)
         {
             for (int row = 0; row < grid.GetLength(0); row++)
             {
                 for (int col = 0; col < grid.GetLength(1); col++)
                 {
+                    // TODO : simplify if statements
+
                     if (col % 2 == 0 && row % 2 != 0)
                     {
                         if (row == 0 || row == grid.GetLength(1) - 1 || col == 0 || col == grid.GetLength(0) - 1)
@@ -107,7 +109,7 @@ namespace ConsoleGUI
             ResetColor();
         }
 
-        private static void InitGrid(int rows, int cols, string[,] grid)
+        private void InitGrid(int rows, int cols, string[,] grid)
         {
             int counter = 0;
             for (int row = 0; row < rows; row++)
