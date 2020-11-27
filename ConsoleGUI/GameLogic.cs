@@ -53,12 +53,7 @@ namespace ConsoleGUI
                         BackgroundColor = ConsoleColor.Red;
                         Write(grid[row, col]);
                     }
-                    else if (col % 2 == 0 && row % 2 != 0)
-                    {
-                        BackgroundColor = ConsoleColor.Green;
-                        Write(grid[row, col]);
-                    }
-                    else if (col % 2 != 0 && row % 2 == 0)
+                    else if (col % 2 == 0 && row % 2 != 0 || col % 2 != 0 && row % 2 == 0)
                     {
                         BackgroundColor = ConsoleColor.Green;
                         Write(grid[row, col]);
