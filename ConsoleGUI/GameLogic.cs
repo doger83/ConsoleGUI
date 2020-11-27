@@ -48,60 +48,25 @@ namespace ConsoleGUI
             {
                 for (int col = 0; col < grid.GetLength(1); col++)
                 {
-                    // TODO : simplify if statements
-
-                    if (col % 2 == 0 && row % 2 != 0)
+                    if (row == 0 || row == grid.GetLength(1) - 1 || col == 0 || col == grid.GetLength(0) - 1)
                     {
-                        if (row == 0 || row == grid.GetLength(1) - 1 || col == 0 || col == grid.GetLength(0) - 1)
-                        {
-                            BackgroundColor = ConsoleColor.Red;
-                            Write(grid[row, col]);
-                        }
-                        else
-                        {
-                            BackgroundColor = ConsoleColor.Green;
-                            Write(grid[row, col]);
-                        }
-
+                        BackgroundColor = ConsoleColor.Red;
+                        Write(grid[row, col]);
                     }
-                    else if (col % 2 == 0 && row % 2 == 0)
+                    else if (col % 2 == 0 && row % 2 != 0)
                     {
-                        if (row == 0 || row == grid.GetLength(1) - 1 || col == 0 || col == grid.GetLength(0) - 1)
-                        {
-                            BackgroundColor = ConsoleColor.Red;
-                            Write(grid[row, col]);
-                        }
-                        else
-                        {
-                            BackgroundColor = ConsoleColor.White;
-                            Write(grid[row, col]);
-                        }
+                        BackgroundColor = ConsoleColor.Green;
+                        Write(grid[row, col]);
                     }
                     else if (col % 2 != 0 && row % 2 == 0)
                     {
-                        if (row == 0 || row == grid.GetLength(1) - 1 || col == 0 || col == grid.GetLength(0) - 1)
-                        {
-                            BackgroundColor = ConsoleColor.Red;
-                            Write(grid[row, col]);
-                        }
-                        else
-                        {
-                            BackgroundColor = ConsoleColor.Green;
-                            Write(grid[row, col]);
-                        }
+                        BackgroundColor = ConsoleColor.Green;
+                        Write(grid[row, col]);
                     }
                     else
                     {
-                        if (row == 0 || row == grid.GetLength(1) - 1 || col == 0 || col == grid.GetLength(0) - 1)
-                        {
-                            BackgroundColor = ConsoleColor.Red;
-                            Write(grid[row, col]);
-                        }
-                        else
-                        {
-                            BackgroundColor = ConsoleColor.White;
-                            Write(grid[row, col]);
-                        }
+                        BackgroundColor = ConsoleColor.White;
+                        Write(grid[row, col]);
                     }
                 }
                 WriteLine();
