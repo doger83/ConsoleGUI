@@ -85,11 +85,6 @@ namespace ConsoleGUI
         /// <summary>
         /// Inizializes the <paramref name="grid"/> with the given <paramref name="rows"/> and <paramref name="cols"/>
         /// </summary>
-        /// <param name="rows">
-        /// Hight of the Grid
-        /// </param>
-        /// <param name="cols">Width of the Grid</param>
-        /// <param name="grid">Used Grid</param>
         public void Initialize()
         {
             int counter = 0;
@@ -112,10 +107,6 @@ namespace ConsoleGUI
         /// <summary>
         /// Inizializes the <paramref name="grid"/> with the given <paramref name="rows"/> and <paramref name="cols"/> with one field around as a buffer
         /// </summary>
-        /// <param name="rows">Hight of the Grid</param>
-        /// <param name="cols">Width of the Grid</param>
-        /// <param name="grid">Used Grid</param>
-        /// <param name="buffer">initializes the grid with buffer only if true</param>
         public void InitializeWithBuffer()
         {
 
